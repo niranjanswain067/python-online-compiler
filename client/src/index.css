@@ -1,0 +1,129 @@
+body{
+  margin:0;
+  padding:0;
+  background:#1e1e1e;
+  color:white;
+  font-family:Arial;
+}
+
+.container{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+  overflow:hidden;
+}
+
+.header{
+  margin-bottom:20px;
+}
+
+.header h1{
+  margin:0;
+  font-size:28px;
+}
+
+.content{
+  display:flex;
+  gap:20px;
+  flex:1;
+  overflow:hidden;
+}
+
+.editor-section{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.editor-label{
+  font-size:14px;
+  font-weight:bold;
+  margin-bottom:10px;
+  color:#ccc;
+}
+
+.editor-wrapper{
+  flex:1;
+  overflow:hidden;
+  border-radius:5px;
+  border:1px solid #333;
+}
+
+.output-section{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.output-label{
+  font-size:14px;
+  font-weight:bold;
+  margin-bottom:10px;
+  color:#ccc;
+}
+
+.output{
+  flex:1;
+  background:#111;
+  padding:15px;
+  border-radius:5px;
+  border:1px solid #333;
+  overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+}
+
+.output h2{
+  margin:0 0 10px 0;
+  font-size:16px;
+}
+
+.output pre{
+  flex:1;
+  margin:0;
+  overflow-y:auto;
+  word-wrap:break-word;
+  white-space:pre-wrap;
+}
+
+.button-group{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  display:flex;
+  gap:10px;
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  background:#007bff;
+  color:white;
+  cursor:pointer;
+  border-radius:5px;
+  font-size:14px;
+  font-weight:bold;
+  transition:background 0.3s;
+}
+
+button:hover{
+  background:#0056b3;
+}
+
+button:disabled{
+  background:#6c757d;
+  cursor:not-allowed;
+}
+
+@media (max-width: 768px) {
+  .content{
+    flex-direction:column;
+  }
+  
+  .editor-wrapper{
+    max-height:40vh;
+  }
+}
